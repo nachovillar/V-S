@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nosotros</title>
+    <title>Contacto</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css ">
@@ -16,14 +16,13 @@
         <div class="contenedor contenido-header">
             <div class="barra">
                 
-                <a href="/">
+                <a href="index.html">
                     <img src="img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
 
                 <nav class="navegacion">
                     <a href="nosotros.html">Nosotros</a>
                     <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
                     <a href="contacto.html">Contacto</a>
                 </nav>
 
@@ -33,12 +32,12 @@
 
     <h1 class="fw-300 centrar-texto">Contacto</h1>
 
-    <main class="contenedor seccion contenido-centrado">
+    <main class="formulario contenedor seccion contenido-centrado">
 
         <h2 class="fw-300 centrar-texto">Llena el Formulario de Contacto</h2>
         
-        <form action="">
-            <fieldset>
+        <form class= "contacto"action="">
+            <fieldset class="bloque">
                 <legend>Información Personal</legend>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" placeholder="Tu Nombre">
@@ -56,7 +55,7 @@
 
             </fieldset>
 
-            <fieldset>
+            <fieldset class="bloque">
 
                 <legend>Información Sobre Propiedad</legend>
                 <label for="opciones">Vende o Compra</label>
@@ -73,17 +72,18 @@
 
             </fieldset>
 
-            <fieldset>
+            <fieldset class="bloque">
 
                 <legend>Contacto</legend>
 
                 <p>Seleccione una Forma de Contacto</p>
-                <label for="telefono">Teléfono</label>
-                <input type="radio" name="contacto" value="telefono" id="telefono">
+                <div class="tipo-contacto">
+                    <label for="telefono">Teléfono</label>
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
 
-                <label for="correo">email</label>
-                <input type="radio" name="contacto" value="correo" id="correo">
-
+                    <label for="correo">email</label>
+                    <input type="radio" name="contacto" value="correo" id="correo">
+                </div>
                 <p>Elija Fecha y Hora de la Llamada</p>
 
                 <label for="fecha">Fecha</label>
