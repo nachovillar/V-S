@@ -18,6 +18,7 @@ img{
     max-width: 100%;
 }
 .contenedor{
+    width: 95%;
     max-width: 120rem ;
     margin: 0 auto 0 auto; /*es como un reloj 0hrs 3hrs 6hrs y 9hrs*/
 }
@@ -64,6 +65,14 @@ h4{
     display: inline-block;
     text-align: center;
     border: none;
+    display:block;
+    flex: 0 0 100%;
+}
+@media (min-width: 768px){
+    .boton{
+        display:inline-block;
+        flex: 0 0 auto;
+    }
 }
  .boton:hover{
      cursor: pointer;
@@ -96,8 +105,14 @@ h4{
     display: flex;
     flex-direction: column; /*Ahora se maneja en forma de columna*/
     justify-content: space-between;/*Espacio entre ambos en forma de columna*/
+    text-align: center;
 }
+@media (min-width: 768px){
+    .contenido-header{
+        text-align: left;
 
+    }
+}
 .contenido-header h1{
     color: white;
     padding: 2rem;
@@ -106,9 +121,15 @@ h4{
 }
 
 .barra{
-    display: flex; /*deja los elementos de la barra de forma horizontal*/
-    justify-content: space-between; /* separo el logo de los href */
     padding-top: 3rem; /*mueve la barra de arriba hacia abajo 30p */
+}
+@media (min-width: 768px){
+    .barra{
+        display: flex; /*deja los elementos de la barra de forma horizontal*/
+        justify-content: space-between; /* separo el logo de los href */
+        align-items: center;
+
+    }
 }
 
 /* Navegacion */
@@ -116,22 +137,32 @@ h4{
     color: white;
     text-decoration: none; /* quito la l inea del href */
     font-size: 1.8rem; /* agrando la letra de los href*/
-    margin-right: 2rem; /* separo los href */
+    display: block;
+}
+@media (min-width: 768px){
+    .navegacion a{
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 2rem; /* separo los href */
+    }
+    .navegacion a:last-of-type {  /* le quito el margin right al ultimo elemento(contacto) */
+        margin: 0;
+    }
 }
 .navegacion a:hover { /* le doy un color al pasar el raton por ensima de los href */
     color: #71B100;
 }
 
-.navegacion a:last-of-type {  /* le quito el margin right al ultimo elemento(contacto) */
-    margin: 0;
-}
+
 
 
 /**Iconos Nosotros**/
-
-.iconos-nosotros{
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 768px){
+    .iconos-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+    
 }
 
 .icono{
@@ -139,16 +170,26 @@ h4{
     text-align: center;
 }
 
+@media (min-width: 768px){
+    .icono{
+        flex-basis: calc(33.3% - 1rem); /*Con esto cada icono tomara el 33.3% del total y eso menos 10 pixeles*/
+        
+    }
+}
+
 .icono h3{
     text-transform: uppercase;
 }
 
 /**Anuncios**/
-.contenedor-anuncio{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (min-width: 768px){
+    .contenedor-anuncio{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
+
 
 .anuncio{
    
@@ -158,6 +199,11 @@ h4{
     margin-bottom: 2rem;
 }
 
+@media (min-width: 768px){
+    .anuncio{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
 .contenido-anuncio{
     padding: 2rem;
 }
@@ -205,7 +251,7 @@ h4{
 }
 
 .contenido-contacto{
-    flex: 1;
+    flex: 0 0 95%;
     color: white;
 }
 
@@ -218,23 +264,43 @@ h4{
     margin-bottom: 0;
 }
 
+
+
+
+.contenedor-footer{
+    padding: 3rem 0;
+    text-align: center;
+}
+@media (min-width:768px){
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer nav{
+    display:none;
+}
+
+@media (min-width: 768px){
+    .site-footer nav{
+        display: block;
+    }
+}
+
 .copyright{
     margin: 0;
     color: white;
 }
+/**Nosotros**/
 
-.contenedor-footer{
-    padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 768px){
+    .contenido-nosotros{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 2rem ;
+    }
 }
-
-.contenido-nosotros{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 2rem ;
-}
-
 .texto-nosotros blockquote{
     font-weight: 900;
     font-size: 2rem;
